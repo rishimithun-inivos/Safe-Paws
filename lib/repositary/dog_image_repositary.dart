@@ -8,7 +8,7 @@ import 'package:safe_paws/model/dog_image_model.dart';
 class DogImageRepository {
   BaseApiService _apiService = NetworkApiService();
 
-  Future<DogImageModel> fetchDogImage() async {
+  Future<DogImageModel> fetchDogImageApi() async {
     dynamic repositoryResponse = await _apiService
         .getGetApiResponse(ApiCalls.dogApiBaseUrl + '/api/breeds/image/random');
     dynamic decodedRepositoryResponse = jsonDecode(repositoryResponse);
