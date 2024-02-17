@@ -4,16 +4,23 @@ import 'package:safe_paws/repositary/dog_image_repositary.dart';
 
 class DogImageViewModel extends ChangeNotifier {
   DogImageRepository dogImageRepository = DogImageRepository();
-  DogImageModel dogImageModel = DogImageModel();
+  DogImageList dogImageList = DogImageList();
+  late bool hasResponseArrived;
 
   init() {
+    hasResponseArrived = false;
     fetchDogImage();
   }
 
   Future<void> fetchDogImage() async {
     await dogImageRepository.fetchDogImageApi().then(
       (value) {
-        dogImageModel = value;
+        hasResponseArrived = true;
+        dogImageList = value;
+      },
+    ).catchError(
+      (error, stackTrace) {
+
       },
     );
     notifyListeners();

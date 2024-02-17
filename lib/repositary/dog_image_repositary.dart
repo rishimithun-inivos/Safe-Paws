@@ -8,11 +8,11 @@ import 'package:safe_paws/model/dog_image_model.dart';
 class DogImageRepository {
   BaseApiService _apiService = NetworkApiService();
 
-  Future<DogImageModel> fetchDogImageApi() async {
+  Future<DogImageList> fetchDogImageApi() async {
     dynamic repositoryResponse = await _apiService
-        .getGetApiResponse(ApiCalls.dogApiBaseUrl + '/api/breeds/image/random');
+        .getGetApiResponse(ApiCalls.dogApiBaseUrl + '/api/breeds/image/random/3');
     dynamic decodedRepositoryResponse = jsonDecode(repositoryResponse);
-    repositoryResponse = DogImageModel.fromJson(decodedRepositoryResponse);
+    repositoryResponse = DogImageList.fromJson(decodedRepositoryResponse);
     return repositoryResponse;
 
   }
