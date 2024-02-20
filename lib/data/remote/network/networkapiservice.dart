@@ -22,6 +22,8 @@ class NetworkApiService extends BaseApiService {
         throw NotFoundException(response.body.toString());
       case 500:
         throw FetchDataException(response.body.toString());
+      //default:
+       // throw Exception("")
     }
   }
 

@@ -39,6 +39,6 @@ class BadRequestException extends AppException{
 class NotFoundException extends AppException{
   NotFoundException([String? message])
       : super (
-    'Page not Found',
+    'Page Not Found',
   );
 }
