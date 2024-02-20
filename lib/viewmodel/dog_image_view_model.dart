@@ -15,10 +15,13 @@ class DogImageViewModel extends ChangeNotifier {
   init() {
     hasResponseArrived = false;
     fetchDogImage();
+    notifyListeners();
   }
 
   Future<void> fetchDogImage() async {
-    await dogImageRepository.fetchDogImageApi().then(
+    hasResponseArrived = false;
+    notifyListeners();
+    dogImageRepository.fetchDogImageApi().then(
       (value) {
         hasResponseArrived = true;
         dogImageList = value;

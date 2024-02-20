@@ -26,10 +26,12 @@ class ErrorPage extends StatelessWidget {
       backgroundColor: Colors.white,
       body: Column(
         children: [
-          Image.asset(
-            'assets/images/groupfive.png',
-            height: 200,
-            width: 200,
+          Text(
+            'HELLO',
+            style: TextStyle(
+              fontSize: 50,
+              color: Colors.black,
+            ),
           ),
         ],
       ),
