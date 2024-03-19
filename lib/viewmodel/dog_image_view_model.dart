@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:safe_paws/main.dart';
@@ -27,17 +25,17 @@ class DogImageViewModel extends ChangeNotifier {
         dogImageList = value;
         notifyListeners();
       },
-    ).catchError(
-      (error, stackTrace) {
-        hasResponseArrived = true;
-        Navigator.push(
-          navigationKey.currentContext!,
-          MaterialPageRoute(
-            builder: (context) => ErrorPage(),
-          ),
-        );
-        notifyListeners();
-      },
+    // ).catchError(
+    //   (error, stackTrace) {
+    //     hasResponseArrived = true;
+    //     Navigator.push(
+    //       navigationKey.currentContext!,
+    //       MaterialPageRoute(
+    //         builder: (context) => ErrorPage(),
+    //       ),
+    //     );
+       // notifyListeners();
+      //},
     );
   }
 }

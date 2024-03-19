@@ -3,6 +3,12 @@
         android:label="safe_paws"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+
+        <meta-data android:name="com.google.android.geo.API_KEY"
+
+            android:value="AIzaSyDEDT6oQZHVSmXBZIdnZZXkhgphDQ8dCtg"/>                       <!--Adding permission to the device-->
+
+
         <activity
             android:name=".MainActivity"
             android:exported="true"

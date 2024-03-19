@@ -29,11 +29,11 @@ class _SplashViewState extends State<SplashView> {
               ),
               const Center(
                 child: Padding(
-                  padding: EdgeInsets.fromLTRB(70, 20, 20, 300),
+                  padding: EdgeInsets.fromLTRB(70, 30, 20, 300),
                   child: Text(
                     "SafePaws",
                     style: TextStyle(
-                        fontSize: 60,
+                        fontSize: 55,
                         fontWeight: FontWeight.bold,
                         fontFamily: 'Poppins',
                         color: Colors.white
