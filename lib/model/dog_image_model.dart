@@ -1,11 +1,11 @@
-class DogImageModel {
-  String? message;
+class DogImageList {
+  List<String>? message;
   String? status;
 
-  DogImageModel({this.message, this.status});
+  DogImageList({this.message, this.status});
 
-  DogImageModel.fromJson(Map<String, dynamic> json) {
-    message = json['message'];
+  DogImageList.fromJson(Map<String, dynamic> json) {
+    message = json['message'].cast<String>();
     status = json['status'];
   }
 
@@ -16,3 +16,5 @@ class DogImageModel {
     return data;
   }
 }
+
+
